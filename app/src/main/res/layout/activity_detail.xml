@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="16dp"
+    tools:context=".DetailActivity">
+
+    <ImageView
+        android:id="@+id/detail_image"
+        android:layout_width="200dp"
+        android:layout_height="240dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        tools:src="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:id="@+id/lL_text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/detail_image"
+        android:layout_toRightOf="@+id/detail_image"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="SKU : " />
+        <TextView
+            android:id="@+id/tv_sku"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            tools:text="SYR-001"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="Product Name : " />
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            tools:text="Kembang Kol"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="Stock : " />
+        <TextView
+            android:id="@+id/tv_stock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            tools:text="100"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="Category : " />
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            tools:text="Sayuran" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="PRICE: " />
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            tools:text="Rp 35.000" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/lL_text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detail_image"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true"
+        android:paddingLeft="14dp"
+        android:layout_marginTop="16dp">
+        
+        <ImageView
+            android:id="@+id/image_small1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="10dp"
+            tools:src="@android:color/darker_gray" />
+
+        <ImageView
+            android:id="@+id/image_small2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/wortel_small2"
+            tools:src="@android:color/darker_gray" />
+
+        <ImageView
+            android:id="@+id/image_small3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/wortel_small3"
+            tools:src="@android:color/darker_gray" />
+
+        <ImageView
+            android:id="@+id/image_small4"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/wortel_small4"
+            tools:src="@android:color/darker_gray" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_desc_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lL_text2"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="8dp"
+        android:text="DESCRIPTION :" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_desc_title"
+        tools:text="@string/aloooo" />
+
+</RelativeLayout>
