@@ -1,10 +1,14 @@
 package com.farmers.market;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Toolbar;
 
 import com.farmers.market.utils.VegetableData;
@@ -24,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle(" Farmers Market");
-//            getSupportActionBar().setDisplayShowHomeEnabled(true);
-//            getSupportActionBar().setIcon(R.drawable.ic_action_name);
         }
 
         rvMain = findViewById(R.id.rv_main);
@@ -35,10 +37,26 @@ public class MainActivity extends AppCompatActivity {
         showRecyclerList();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        showProfile();
+        return super.onOptionsItemSelected(item);
+    }
 
     public void showRecyclerList() {
         rvMain.setLayoutManager(new LinearLayoutManager(this));
         MainAdapter mainAdapter = new MainAdapter(list);
         rvMain.setAdapter(mainAdapter);
+    }
+
+    public void showProfile() {
+        Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+        startActivity(intent);
     }
 }
